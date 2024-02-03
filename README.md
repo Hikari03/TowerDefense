@@ -1,5 +1,8 @@
 # Tower Defense
 
+## Instalation
+ - Simply git clone and run `make compile` and then `./td` in this directory
+
 ## Description
 
 ### Introduction
