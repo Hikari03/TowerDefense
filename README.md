@@ -104,3 +104,7 @@ screenshots:
 - `Invisible` - <span style="color: #04E0E0">blue</span>
 
 ![](https://houdeda2.cz/hosting/tower_defense/tower_defense_screen.png)
+
+
+# TODO
+ - [ ] Rewrite rendering to use librender from personal projects to get rid of awful things like `system(clear)`
