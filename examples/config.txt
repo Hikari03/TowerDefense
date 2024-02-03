@@ -1,0 +1,52 @@
+Map: map1.txt
+Starting Money: 150
+Starting Health: 10
+----------------------------------------
+Tower
+Buy Cost (int): 100
+Base Damage (double): 15
+Range (int): 5
+Cooldown (int): 1
+Upgrade Cost (int): 50
+Sell Price (int): 40
+Max Level (int): 4
+Upgrade> Damage Scalar (double): 1.2
+Upgrade> Cost Scalar (int): +10
+Upgrade> Sell Price Scalar (double): 0.8
+Tower
+----------------------------------------
+FireTower
+Fire Intensity (int): 3
+Fire Intensity Scalar (int): 2
+FireTower
+----------------------------------------
+SpecializingTower
+FireTower> Damage Scalar (double): 0.9
+FireTower> Range Scalar (int): -1
+FireTower> Cooldown Scalar (int): +1
+IceTower> Damage Scalar (double): 0.5
+IceTower> Range Scalar (int): +2
+IceTower> Cooldown Scalar (int): -1
+SniperTower> Damage Scalar (double): 2
+SniperTower> Range Scalar (int): +15
+SniperTower> Cooldown Scalar (int): +2
+SpecializingTower
+----------------------------------------
+Enemy
+Minion> Health Scalar (double): 10
+Minion> Speed (int): 2
+Minion> Reward Scalar (int): 10
+Orc> Health Scalar (double): 50
+Orc> Speed (int): 3
+Orc> Reward Scalar (int): 50
+Orc> Armor Damage Absorption (double): 0.5
+Dragon> Health Scalar (double): 80
+Dragon> Speed (int): 1
+Dragon> Reward Scalar (int): 80
+Dragon> Invisibility Duration (int): 3
+Boss> Health Scalar (double): 120
+Boss> Speed (int): 1
+Boss> Reward Scalar (int): 120
+Boss> Health Regeneration Scalar (int): 3
+Enemy
+----------------------------------------
