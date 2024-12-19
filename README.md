@@ -1,7 +1,7 @@
 # Tower Defense
 
-## Instalation
- - Simply git clone and run `make compile` and then `./td` in this directory
+## Installation
+ - Simply git clone and run `make` and then `./td` in this directory
 
 ## Description
 
@@ -50,8 +50,8 @@ User interface is realized without any graphics library.
 #### Tower menu
 
 - `1-9` to input tower spot
-- `e` to erase number
-- `c` to confirm
+- `backspace` to erase number
+- `enter` to confirm
 
 When tower menu is active, UI is interactively updated with colors to show
 which spot is <span style="color: #FFC3FF">free</span>, which is <span style="color: #5F87FF">occupied</span> and
@@ -107,7 +107,3 @@ screenshots:
 - `Invisible` - <span style="color: #04E0E0">blue</span>
 
 ![](https://houdeda2.cz/hosting/tower_defense/tower_defense_screen.png)
-
-
-# TODO
- - [ ] Rewrite rendering to use librender from personal projects to get rid of awful things like `system(clear)`

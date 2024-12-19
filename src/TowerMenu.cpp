@@ -1,35 +1,36 @@
 #include <unistd.h>
+#include <termios.h>
 #include "TowerMenu.h"
 
 
 TowerMenu::TowerMenu(Renderer & renderer, GameState & game) : renderer(renderer), game(game) {}
 
 void TowerMenu::show() {
-    
-    char towerSpotS;
-
     string choiceString;
+    struct termios original;
+
+    // save the original terminal settings
+    tcgetattr(STDIN_FILENO, &original);
+    setRawMode();
 
     while( true )
     {
         renderer.render(true, choiceString.empty() ? -1 : ( stoul(choiceString)-1 > game.towers.size() ? -1 : stoi(choiceString)-1 )); // render in tower menu mode
         cout << endl << GREEN "Tower spots are ordered from left to right, up to down\n";
         cout << "Total number of tower spots: " << game.towers.size() << "\n";
-        cout << "Controls: e - erase | c - confirm\n";
+        cout << "Controls: 'backspace' to erase | 'enter' to confirm\n";
         cout << "Enter number of tower spot you want to edit, leave blank to exit:\033[38;5;165m ";
         cout << choiceString << flush;
-        system("/bin/stty raw");
-        cin >> towerSpotS;
-        system("/bin/stty cooked");
+        const char towerSpotS = getchar();
         cout << RESET << flush;
-        if( towerSpotS == 'e' )//backspace
+        if( towerSpotS == 127 )//backspace
         {
             if( !choiceString.empty() )
                 choiceString.pop_back();
             continue;
         }
 
-        else if( towerSpotS == 'c' )//enter
+        else if( towerSpotS == '\n' || towerSpotS == '\r' )//enter
             break;
 
         else if( towerSpotS < 48 || towerSpotS > 57 )//not a number
@@ -38,6 +39,9 @@ void TowerMenu::show() {
         else if ( choiceString.length() < 2 )
             choiceString += towerSpotS;
     }
+
+    // reset terminal to original settings
+    tcsetattr(STDIN_FILENO, TCSANOW, &original);
 
 
     if (choiceString.empty()) {
@@ -323,6 +327,19 @@ void TowerMenu::sellTower(unsigned long pos) {
         return;
     }
 
+}
+
+void TowerMenu::setRawMode() {
+    struct termios newt;
+
+    // Get the current terminal attributes
+    tcgetattr(STDIN_FILENO, &newt);
+
+    // Disable echo and input canonicalization
+    newt.c_lflag &= ~(ICANON | ECHO);
+
+    // Set the modified attributes
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
 }
 
 

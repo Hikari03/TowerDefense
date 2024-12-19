@@ -13,7 +13,8 @@ CXXFLAGS := $(FLAGS)
 CC := gcc
 CXX := g++
 
-all: MakeBuild $(TARGET)
+all: MakeBuild
+	@$(MAKE) $(TARGET) -j$(nproc)
 
 MakeBuild:
 	@mkdir -p obj
@@ -27,5 +28,5 @@ obj/%.o: $(SRCDIR)/%.cpp
 .PHONY: clean
 
 clean:
-	rm -rf obj/*
+	rm -rf obj
 	rm -f $(TARGET)
