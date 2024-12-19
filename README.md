@@ -37,7 +37,7 @@ Tower can be upgraded to these types, aka **specialized**.
 
 User interface is realized without any graphics library.
 
-![](https://houdeda2.cz/hosting/tower_defense/tower_defense_UI.png)
+![tower_defense_UI](https://github.com/Hikari03/TowerDefense/assets/39591367/3ec32f9b-12e8-4673-9c51-49e8ee3566e5)
 
 ## Key bindings
 
@@ -58,8 +58,8 @@ which spot is <span style="color: #FFC3FF">free</span>, which is <span style="co
 whenever are you **selecting** <span style="color: #FF40FF">free</span> or <span style="color: #660BFF">occupied</span> spot
 as shown in screenshots below.
 
-![](https://houdeda2.cz/hosting/tower_defense/tower_defense_tower_menu_.png)
-![](https://houdeda2.cz/hosting/tower_defense/tower_defense_tower_menu_2.png)
+![tower_defense_tower_menu_](https://github.com/Hikari03/TowerDefense/assets/39591367/e3a5f85f-8186-4cae-8ef0-47360c4a1430)
+![tower_defense_tower_menu_2](https://github.com/Hikari03/TowerDefense/assets/39591367/14e24578-c3e8-4092-bf64-592479dec413)
 
 ## Other Features
 
@@ -92,13 +92,13 @@ Map has to be .txt file and has to contain only these characters:
 Using these characters, you can create any map you want. Here is example of map from
 screenshots:
 
-![](https://houdeda2.cz/hosting/tower_defense/tower_defense_map_example.png)
+![tower_defense_map_example](https://github.com/Hikari03/TowerDefense/assets/39591367/48d6d285-9071-4e81-994e-237a2b3add0a)
 
 ### Other Visual Features
 
 #### You can see name with health of spawned enemies in lower left corner
 
-![](https://houdeda2.cz/hosting/tower_defense/tower_defense_enemies_display.png)
+![tower_defense_enemies_display](https://github.com/Hikari03/TowerDefense/assets/39591367/d528a2e4-006c-4cd3-96b6-e5b1fc96fbac)
 
 #### Enemy coloring
 
@@ -106,4 +106,4 @@ screenshots:
 - `Attacked` - <span style="background-color: #B51C27">red background</span>
 - `Invisible` - <span style="color: #04E0E0">blue</span>
 
-![](https://houdeda2.cz/hosting/tower_defense/tower_defense_screen.png)
+![tower_defense_screen](https://github.com/Hikari03/TowerDefense/assets/39591367/39d4b6d8-0516-4d51-b0fb-580bf1756700)
