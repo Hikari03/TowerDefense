@@ -80,6 +80,11 @@ private:
      */
     void sellTower(long unsigned int pos);
 
+    /**
+    * @brief sets raw mode for terminal with no echo
+    */
+    void setRawMode();
+
     Renderer & renderer;
     GameState & game;
 
