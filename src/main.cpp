@@ -34,7 +34,7 @@ void showTitleScreen() {
                       "┃                                                                                             ┃\n"
                       "┃                                                                                             ┃\n"
                       "┃                                                                                             ┃\n"
-                      "┃                                                                  Developed by: David Houdek ┃\n"
+                      "┃                                                                      Developed by: hikari03 ┃\n"
                       "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m\n" << endl;
 
     system("/bin/stty raw");
