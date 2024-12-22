@@ -1,5 +1,9 @@
 # Tower Defense
 
+[![](https://tokei.rs/b1/github/Hikari03/TowerDefense?category=lines)](https://github.com/Hikari03/TowerDefense)
+[![](https://tokei.rs/b1/github/Hikari03/TowerDefense?category=code)](https://github.com/Hikari03/TowerDefense)
+
+
 ## Installation
  - Simply git clone and run `make` and then `./td` in this directory
 
